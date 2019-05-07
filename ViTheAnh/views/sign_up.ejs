@@ -1,0 +1,136 @@
+  <% include template/header %>
+<style>
+  #miss , #same , #usernull , #emailexist{
+    animation : shake 0.5s ;
+  }
+  @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+<body>
+
+<div class="container">
+      <h1 class="display-4 text-center mt-3">New Member Registration</h1>
+      <form class="row" id="form_sign_up">
+        <div class="form-group col-12 col-md-6">
+          <label for="user">
+            Full Name
+            </label
+          >
+          <span><i id="userno" class="fas fa-times-circle text-danger check "></i></span>
+          <span><i id="useryes" class="fas fa-check-circle text-success check" ></i></span>
+          <span id="usernull" class="text-danger check"> Không được bỏ trống trường này </span>
+          <input
+            class="form-control"
+            type="text"
+            id="user"
+            name="user"
+            placeholder="Enter Your Name"
+            maxlength="30"
+          />
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="contact">
+            Phone Number </label
+          >
+          <span><i id="contactno"class="fas fa-times-circle text-danger check "> Số điện thoại không hợp lệ</i></span>
+          <span><i id="contactyes" class="fas fa-check-circle text-success check " ></i></span>
+          <span id="contactexist" class="text-danger check"> Số điện thoại đã được sử dụng </span>
+          <span id="contactnull" class="text-danger check"> Không được bỏ trống trường này </span>
+          <input
+            class="form-control"
+            type="text"
+            name ="contact"
+            placeholder="Enter Phone Number"
+          />
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="adress">
+            Adress </label
+          >
+          <span><i id="adressno"class="fas fa-times-circle text-danger check "></i></span>
+          <span><i id="adressyes"class="fas fa-check-circle text-success check " ></i></span>
+          <span id="adressnull" class="text-danger check"> Không được bỏ trống trường này </span>
+          <input
+            class="form-control"
+            type="text"
+            id="adress"
+            name="adress"
+            placeholder="Enter Your Adress"
+            maxlength="30"
+          />
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="email">
+            Email </label
+          >
+          <span><i id="emailno" class="fas fa-times-circle text-danger check emailcheckyes">Email không hợp lệ</i></span>
+          <span><i id="emailyes" class="fas fa-check-circle text-success check emailcheckno" ></i></span>
+          <span id="emailexist" class="text-danger check"> Email đã được sử dụng </span>
+          <span id="emailnull" class="text-danger check"> Không được bỏ trống trường này </span>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+         
+          />
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="pass">
+            PassWord(Từ 8-24 ký tự bao gồm chữ hoa,chữ thường và số) </label
+          >
+          <span><i id="passwordno" class="fas fa-times-circle text-danger check passcheckyes">Password quá yếu</i></span>
+          <span><i id="passwordyes" class="fas fa-check-circle text-success check passcheckno" ></i></span>
+          <span id="passwordnull" class="text-danger check"> Không được bỏ trống trường này </span>
+          <input
+            class="form-control"
+            type="password"
+            id="pass"
+            name="password"
+            placeholder="Enter Your PassWord"
+            maxlength="30"
+          />
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="pass-repeat">
+            Repeat your PassWord </label
+          >
+          <span><i id="repassno" class="fas fa-times-circle text-danger check repassyes">Mật khẩu không khớp</i></span>
+          <span><i id="repassyes" class="fas fa-check-circle text-success check repassno"></i></span>
+          <input
+            class="form-control"
+            type="password"
+            id="repass"
+            name="repass"
+            placeholder="Repeat Your PassWord"
+            maxlength="30"
+          />
+      </div>
+      <div id="miss" class="col-12 text-center check text-danger "><p> Vui lòng nhập đầy đủ thông tin</p></div>
+      <p class="col-12 text-center"> Bạn đã đồng ý với các điều khoản dịch vụ <a href="#"> Điều khoản dịch vụ </a> </p>
+      <div class="form-group col-12 col-md-6 ">
+         <button  class="col-12 col-md-6 btn btn-success mt-2 mx-auto d-block" value="sign_up" id="sign_up">Đăng ký</button></a>
+    
+      </div>
+      <div class="form-group col-12 col-md-6 ">
+     <button  class="col-12 col-md-6 btn btn-secondary mt-2 mx-auto d-block " value="clear" id="clear">Clear</button></a>
+      </div>
+      <div class="form-group col-12 col-md-6 ">
+      <a class="btn btn-success " href="sign-in">Đăng nhập</a>
+      </div>
+      </form>
+    </div>
+</body>
+
+<% include template/footer %>

@@ -1,0 +1,64 @@
+  <% include template/header %>
+  <style>
+  #login-false , #login-exist{
+    animation : shake 0.5s ;
+  }
+  @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+<body>
+
+    <div class="container">
+    <h1 class="display-4 text-center"> Đăng nhập </h1>
+    <form class="row" id="form_sign_in">
+        <div class="col-12 col-md-8 mx-auto">
+        <div class="form-group col-12 col-md-8 mx-auto">
+        <label class="font-weight-bold"for="user">
+        Email hoặc số điện thoại</label
+      >
+      <input
+        class="form-control"
+        type="text"
+        id="user"
+        name="user"
+        placeholder="Enter Your Account"
+      />
+        </div>
+      <div class="form-group col-12 col-md-8 mx-auto">
+      <label class="font-weight-bold"for="pass">
+      Mật Khẩu</label
+    >
+    <input
+      class="form-control"
+      type="password"
+      id="pass"
+      name="pass"
+      placeholder="Enter Your Password" />
+      </div>
+      <div  class="form-group col-12 col-md-8 mx-auto ">
+      <p id="login-false" class=" text-center text-danger"> Sai tên đăng nhập hoặc mật khẩu </p>
+      <p id ="login-exist" class=" text-center text-danger"> Tài khoản không tồn tại </p>
+      </div>
+      </div>
+      <div class="form-group col-12 col-md-8 mx-auto">
+      <a id="forget" class="col-12 col-md-8 text-warning" style="padding-bottom:20px;padding-top:0px;"> Quên mật khẩu </a>
+      <button class="col-12 col-md-8 btn btn-success " id="sign_in" style="margin-bottom:20px;">Đăng nhập</button>
+         <a class="col-12 col-md-8 btn btn-success " href="sign-up">Đăng ký</a>
+         
+      </div>
+      </div>
+    </form> 
+    </div>   
+</body>
+<% include template/footer %>

@@ -1,0 +1,42 @@
+<% include header_sign %>
+ 
+<body>
+<div class="container">
+    <h1 class="display-4 text-center"> Reset your password </h1>
+    <form class="row" id="form_reset">
+      <div class="col-12 col-md-8 mx-auto">
+      <div class="form-group col-12 col-md-8 mx-auto">
+      <label class="font-weight-bold"for="password">
+      Enter new password</label
+    >
+    <input
+      class="form-control"
+      type="password"
+      id="password"
+      name="pass"
+      placeholder="Enter Your Password"
+    />
+      </div>
+      <div class="form-group col-12 col-md-8 mx-auto">
+      <label class="font-weight-bold"for="pass-repeat">
+      Verify your password</label
+    >
+    <input
+      class="form-control"
+      type="password"
+      id="pass-repeat"
+      name="pass-repeat"
+      placeholder="Enter Your Password"
+    />
+      </div>
+      <div id="repeat-false" class="form-group col-12 col-md-8 mx-auto ">
+      <p class=" text-center text-danger"> Password is not the same </p>
+      </div>
+      <div class="form-group col-12 col-md-8 mx-auto">
+      <button class="btn btn-success d-block mx-auto mt-2" value="xacnhan" id="conform">Xác nhận</button>
+      </div>
+      </div>
+    </form> 
+    </div>
+</body>
+<% include footer %>
